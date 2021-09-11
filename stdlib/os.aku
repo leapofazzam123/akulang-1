@@ -12,3 +12,11 @@ func @void exec(@string command) {
 func @string getenvvar(@string key) {
     extc return getenv(key);
 };
+
+func @void setcwddir(@string path) {
+    extc chdir(path);
+};
+
+func @string getcwddir() {
+    extc return getcwd(NULL, 0);
+};
