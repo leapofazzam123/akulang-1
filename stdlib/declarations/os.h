@@ -1,3 +1,3 @@
 void exitwith(int status);
-void runcmd(char* command);
-char* getenviro(char* key);
+void exec(char* command);
+char* getenvvar(char* key);
