@@ -5,10 +5,10 @@ func @void exitwith(@int status) {
     extc exit(status);
 };
 
-func @void runcmd(@string command) {
+func @void exec(@string command) {
     extc system(command);
 };
 
-func @string getenviro(@string key) {
-    extc printf("unimplemented\n");
+func @string getenvvar(@string key) {
+    extc return getenv(key);
 };
